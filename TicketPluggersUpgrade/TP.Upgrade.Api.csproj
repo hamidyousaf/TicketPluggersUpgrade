@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TP.Upgrade.Application\TP.Upgrade.Application.csproj" />
+    <ProjectReference Include="..\TP.Upgrade.Infrastructure\TP.Upgrade.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjeReference Include="..\TP.Upgrade.Application\TP.Upgrade.Application.csproj" />
+    <ProjeReference Include="..\TP.Upgrade.Infrastructure\TP.Upgrade.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\Images\" />
+    <Folder Include="wwwroot\Static\" />
+  </ItemGroup>
+
+</Project>

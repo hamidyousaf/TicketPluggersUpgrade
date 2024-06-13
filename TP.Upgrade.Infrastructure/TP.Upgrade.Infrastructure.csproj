@@ -1,0 +1,60 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Helpers\SQL\Insert-Query\Currencies.sql" />
+    <None Remove="Helpers\SQL\Insert-Query\SpecificationAttributeOptions.sql" />
+    <None Remove="Helpers\SQL\Insert-Query\SpecificationAttributes.sql" />
+    <None Remove="Helpers\SQL\Insert-Query\SplitTicketOptions.sql" />
+    <None Remove="Helpers\SQL\Stored-Procedures\sp_GetEventsByFilter.sql" />
+    <None Remove="Helpers\SQL\Stored-Procedures\sp_GetEventsBySearch.sql" />
+    <None Remove="Helpers\SQL\Stored-Procedures\sp_GetEventsByVenueId.sql" />
+    <None Remove="Helpers\SQL\Stored-Procedures\sp_GetEventsOnLoad.sql" />
+    <None Remove="Helpers\SQL\Stored-Procedures\sp_GetEventsOnLoadNew.sql" />
+    <None Remove="Helpers\SQL\Stored-Procedures\sp_GetHotEvents.sql" />
+    <None Remove="Helpers\SQL\Stored-Procedures\sp_GetOrdersByCustomer.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TP.Upgrade.Application\TP.Upgrade.Application.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="External Services\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="7.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="MongoDB.Driver" Version="2.19.1" />
+    <EmbeddedResource Include="Helpers\SQL\Insert-Query\Currencies.sql" />
+    <EmbeddedResource Include="Helpers\SQL\Insert-Query\SpecificationAttributeOptions.sql" />
+    <EmbeddedResource Include="Helpers\SQL\Insert-Query\SplitTicketOptions.sql" />
+    <EmbeddedResource Include="Helpers\SQL\Insert-Query\SpecificationAttributes.sql" />
+    <EmbeddedResource Include="Helpers\SQL\Stored-Procedures\sp_GetHotEvents.sql" />
+    <EmbeddedResource Include="Helpers\SQL\Stored-Procedures\sp_GetEventsBySearch.sql" />
+    <EmbeddedResource Include="Helpers\SQL\Stored-Procedures\sp_GetEventsByVenueId.sql" />
+    <EmbeddedResource Include="Helpers\SQL\Stored-Procedures\sp_GetEventsByFilter.sql" />
+    <EmbeddedResource Include="Helpers\SQL\Stored-Procedures\sp_GetEventsOnLoadNew.sql" />
+    <EmbeddedResource Include="Helpers\SQL\Stored-Procedures\sp_GetEventsOnLoad.sql" />
+    <EmbeddedResource Include="Helpers\SQL\Stored-Procedures\sp_GetOrdersByCustomer.sql" />
+	  <EmbeddedResource Include="Helpers\SQL\Stored-Procedures\sp_MigrateEventInfo.sql" />
+  </ItemGroup>
+
+</Project>
